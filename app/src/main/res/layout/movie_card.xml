@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.ahk.movieslist.data.Movie"/>
+        <import type="com.ahk.movieslist.utils.Constants"/>
+        
+        <variable
+            name="movie"
+            type="Movie" />
+
+        <variable
+            name="images"
+            type="Constants" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="5dp"
+        app:contentPadding="5dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/card_movie_poster"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:load="@{images.IMAGE_BASE_URL + movie.poster_path}"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/card_movie_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{movie.title}"
+                android:textSize="18sp"
+                android:textColor="@color/fontColor"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"/>
+
+            <TextView
+                android:id="@+id/card_movie_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{movie.release_date}"
+                android:textSize="15sp"
+                android:textColor="@color/fontColorLight"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="5dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/popular"
+        android:icon="@mipmap/ic_popular"
+        android:id="@+id/menu_popular"/>
+    <item android:title="@string/latest"
+        android:icon="@mipmap/ic_latest"
+        android:id="@+id/menu_latest"/>
+</menu>

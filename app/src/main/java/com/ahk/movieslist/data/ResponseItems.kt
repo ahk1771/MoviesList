@@ -1,0 +1,7 @@
+package com.ahk.movieslist.data
+
+import com.squareup.moshi.Json
+
+data class ResponseItems<T>(
+    @field:Json(name = "results") val results: List<T>
+)
